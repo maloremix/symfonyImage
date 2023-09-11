@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Введите URL{% endblock %}
+
+{% block body %}
+    <h1>Введите URL</h1>
+    <form method="post" action="{{ path('app_image') }}">
+        <label for="url">URL:</label>
+        <input type="text" id="url" name="url">
+        <button type="submit">Го</button>
+    </form>
+{% endblock %}

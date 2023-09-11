@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Результат{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1>Результат</h1>
+    <div class="image-grid">
+        {% for image in images %}
+            {# Отображение изображений с использованием asset #}
+            <img src="{{ asset(image) }}" alt="Изображение">
+        {% endfor %}
+    </div>
+    <p>На странице обнаружено {{ imageCount }} изображений на {{ totalSize }}.</p>
+{% endblock %}
